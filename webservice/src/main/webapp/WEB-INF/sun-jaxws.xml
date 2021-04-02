@@ -2,7 +2,7 @@
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" 
            version="2.0">
   <endpoint name="HelloService" 
-            implementation="org.test.ws.Webservicehello" 
+            implementation="com.helloweb.ws.Webservicehello" 
             url-pattern="/helloService" >
   </endpoint>
 </endpoints>

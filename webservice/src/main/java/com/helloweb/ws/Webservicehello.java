@@ -1,4 +1,4 @@
-package org.test.ws;
+package com.helloweb.ws;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
