@@ -1,7 +1,8 @@
-FROM bitnami/tomcat:9.0.44-debian-10-r0
+FROM tomcat:9.0-jdk8-adoptopenjdk-hotspot
 
 #USER root
 #RUN mkdir /home/customscripts
-COPY jars/*.jar /opt/bitnami/tomcat/lib
-COPY HelloService.war /opt/bitnami/tomcat/webapps
+COPY jars/*.jar /usr/local/tomcat/lib
+COPY HelloService.war /usr/local/tomcat/webapps
 
+#CMD [ "/opt/tomcat/bin/catalina.sh" ]
