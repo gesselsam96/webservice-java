@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#BTNSERVICE").click(function (event) {
+
+                var webserUrl = "http://localhost:62187/SampleService.asmx";
+
+                var soapRequest =
+
+'<?xml version="1.0" encoding="utf-8"?> \
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" \
+
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" \
+
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"> \
+
+<soap:Body> \
+
+<Add xmlns="http://tempuri.org/">\
+
+<x>4</x>\
+
+<y>5</y> \
+
+</Add>\
+
+</soap:Body> \
+
+</soap:Envelope>';
+                $.ajax({
+                    type: "POST",
+                    url: webserUrl,
+                    contentType: "text/xml",
+                    dataType: "xml",
+                    data: soapRequest,
+                    success: SuccessOccur,
+                    error: ErrorOccur
+                });
+            });
+        });
+        function SuccessOccur(data, status, req) {
+            if (status == "success")
+                alert(req.responseText);
+        }
+
+        function ErrorOccur(data, status, req) {
+            alert(req.responseText + " " + status);
+        }
+
+    </script>
+</head>
+<body>
+    <form runat="server">
+    <asp:button id="BTNSERVICE" runat="server" text="BTNSERVICE" />
+    SAMPLE Application to test service
+    </form>
+</body>
+</html>  
