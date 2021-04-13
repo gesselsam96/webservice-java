@@ -12,7 +12,7 @@
   <servlet>
   <display-name>ConsumeGreeting</display-name>
     <servlet-name>ConsumeGreeting</servlet-name>
-    <servlet-class>demo.ConsumeGreeting</servlet-class>
+    <servlet-class>com.helloweb.wsclient.ConsumeGreeting</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ConsumeGreeting</servlet-name>

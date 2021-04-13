@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Greetings Page</title>
-    </head>
+<head>
+  <title>Greetings Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
     <body>
-		<form action="/webclient/ConsumeGreeting" method="post">
+<!-- 		<form action="/HelloClient/ConsumeGreeting" method="post">
 		<h1>Welcome to Greetings page</h1>
 		
 		Enter name: <input type="text" name="name" id="name" /> <br>
 		<input type="submit" value="Get Greetings"/>
+		</form> -->
+<div class="jumbotron text-center">
+  <h1>Java Servlet</h1>
+  <p>Welcome to Greetings page!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Enter your name below</h3>
+		<form action="/HelloClient/ConsumeGreeting" method="post">
+		    <div class="form-group">
+			  <label for="usr">Enter your name:</label>
+			  <input type="text" class="form-control" id="name" name="name">
+			</div>
+		<button type="submit" class="btn btn-primary">Greetings!</button>
 		</form>
+      <p>Form post method ...</p>
+      <p>This form sends request to the appropriate class. 
+	  A method is triggered that then redirects to show result in a new JSP page.</p>
+    </div>
+  </div>
+</div>
     </body>
 </html>
